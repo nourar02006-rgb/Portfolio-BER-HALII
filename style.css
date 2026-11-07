@@ -1,45 +1,33 @@
-{
-    box-sizing:border-box;
-    font-family: "Tahoma", Arial, sans-serif;
+*{
+box-sizing:border-box;
 }
-
 
 body{
 
-    margin:0;
-
-    background:#f7f7f7;
-
-    color:#333;
-
-    line-height:1.8;
+margin:0;
+font-family:Tahoma, Arial, sans-serif;
+background:#f5f7f6;
+color:#333;
 
 }
 
 
-
+/* الشعار والهيدر */
 
 header{
 
-    background:#0b6b50;
-
-    color:white;
-
-    text-align:center;
-
-    padding:25px;
+background:white;
+text-align:center;
+padding:25px;
 
 }
-
 
 
 .logo{
 
-    width:120px;
-
-    height:auto;
-
-    margin-bottom:10px;
+width:120px;
+height:auto;
+margin-bottom:15px;
 
 }
 
@@ -47,17 +35,15 @@ header{
 
 header h1{
 
-    margin:10px 0;
+color:#00796b;
+font-size:32px;
 
 }
-
 
 
 header p{
 
-    margin:0;
-
-    font-size:18px;
+font-size:18px;
 
 }
 
@@ -65,22 +51,16 @@ header p{
 
 
 
+/* القائمة */
 
 nav{
 
-    background:white;
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    padding:15px;
-
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
+background:#00796b;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+padding:15px;
 
 }
 
@@ -88,15 +68,11 @@ nav{
 
 nav a{
 
-    text-decoration:none;
-
-    color:#0b6b50;
-
-    padding:8px 15px;
-
-    border-radius:20px;
-
-    transition:.3s;
+color:white;
+text-decoration:none;
+padding:10px 18px;
+border-radius:25px;
+transition:.3s;
 
 }
 
@@ -104,9 +80,8 @@ nav a{
 
 nav a:hover{
 
-    background:#0b6b50;
-
-    color:white;
+background:white;
+color:#00796b;
 
 }
 
@@ -114,13 +89,12 @@ nav a:hover{
 
 
 
-
+/* البانر */
 
 .hero{
 
-    width:90%;
-
-    margin:25px auto;
+width:90%;
+margin:25px auto;
 
 }
 
@@ -128,13 +102,11 @@ nav a:hover{
 
 .banner{
 
-    width:100%;
-
-    height:350px;
-
-    object-fit:cover;
-
-    border-radius:20px;
+width:100%;
+height:auto;
+max-height:450px;
+object-fit:contain;
+border-radius:20px;
 
 }
 
@@ -142,45 +114,27 @@ nav a:hover{
 
 
 
-
+/* البطاقات */
 
 .card{
 
-    background:white;
+background:white;
+width:90%;
+margin:25px auto;
+padding:30px;
+border-radius:20px;
 
-    width:90%;
-
-    margin:25px auto;
-
-    padding:25px;
-
-    border-radius:20px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-
-    animation:show .7s ease;
+box-shadow:
+0 8px 20px rgba(0,0,0,.1);
 
 }
 
 
 
-@keyframes show{
+.card h2{
 
-    from{
-
-        opacity:0;
-
-        transform:translateY(20px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
+color:#00796b;
+text-align:center;
 
 }
 
@@ -188,102 +142,26 @@ nav a:hover{
 
 
 
-
-
-h2{
-
-    color:#0b6b50;
-
-    text-align:center;
-
-}
-
-
-
-h2::after{
-
-    content:"";
-
-    display:block;
-
-    width:60px;
-
-    height:3px;
-
-    background:#d39b2a;
-
-    margin:10px auto;
-
-}
-
-
-
-
-
-
-
-.cards{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:20px;
-
-}
-
-
-
-
-.service-box{
-
-    background:#fff;
-
-    border:1px solid #ddd;
-
-    border-radius:15px;
-
-    padding:20px;
-
-    width:260px;
-
-    transition:.3s;
-
-}
-
-
-
-.service-box:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-
-}
-
-
-
-
-
-
+/* أزرار */
 
 .button{
 
-    display:inline-block;
+display:inline-block;
+background:#009688;
+color:white;
 
-    background:#0b6b50;
+padding:12px 25px;
 
-    color:white;
+border-radius:30px;
 
-    text-decoration:none;
+text-decoration:none;
 
-    padding:12px 25px;
+margin-top:15px;
 
-    border-radius:25px;
+box-shadow:
+0 5px 15px rgba(0,150,136,.4);
 
-    transition:.3s;
+transition:.3s;
 
 }
 
@@ -291,63 +169,9 @@ h2::after{
 
 .button:hover{
 
-    background:#094d3b;
+transform:translateY(-5px);
 
-    transform:scale(1.05);
-
-}
-
-
-
-
-
-
-
-form{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
-}
-
-
-
-input, textarea{
-
-    padding:12px;
-
-    border:1px solid #ccc;
-
-    border-radius:10px;
-
-}
-
-
-
-textarea{
-
-    height:120px;
-
-}
-
-
-
-button{
-
-    background:#0b6b50;
-
-    color:white;
-
-    border:none;
-
-    padding:12px;
-
-    border-radius:20px;
-
-    cursor:pointer;
+background:#00695c;
 
 }
 
@@ -355,124 +179,14 @@ button{
 
 
 
+/* البطاقات الداخلية */
 
+.cards{
 
-.stats{
-
-    width:90%;
-
-    margin:30px auto;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-}
-
-
-
-.stat-box{
-
-    background:#0b6b50;
-
-    color:white;
-
-    width:220px;
-
-    padding:25px;
-
-    text-align:center;
-
-    border-radius:15px;
-
-    transition:.3s;
-
-}
-
-
-
-.stat-box:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-
-
-
-
-#topBtn{
-
-    position:fixed;
-
-    bottom:20px;
-
-    left:20px;
-
-    display:none;
-
-    background:#0b6b50;
-
-    color:white;
-
-    border:none;
-
-    width:45px;
-
-    height:45px;
-
-    border-radius:50%;
-
-    font-size:22px;
-
-}
-
-
-
-
-
-
-footer{
-
-    background:#0b6b50;
-
-    color:white;
-
-    text-align:center;
-
-    padding:20px;
-
-    margin-top:40px;
-
-}
-
-
-
-.social-links a{
-
-    color:white;
-
-    text-decoration:none;
-
-    margin:5px;
-
-}
-
-
-
-
-
-@media(max-width:700px){
-
-
-.banner{
-
-    height:220px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
 
 }
 
@@ -480,7 +194,140 @@ footer{
 
 .service-box{
 
-    width:100%;
+background:#fafafa;
+
+padding:25px;
+
+width:250px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+
+
+.service-box:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+
+
+/* الاحصائيات */
+
+.stats{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+
+
+.stat-box{
+
+background:#00796b;
+
+color:white;
+
+padding:25px;
+
+width:250px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+
+
+
+
+/* زر العودة للأعلى */
+
+#topBtn{
+
+position:fixed;
+
+bottom:25px;
+
+left:25px;
+
+background:#009688;
+
+color:white;
+
+border:none;
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+font-size:25px;
+
+cursor:pointer;
+
+}
+
+
+
+
+/* الفوتر */
+
+footer{
+
+background:#222;
+
+color:white;
+
+text-align:center;
+
+padding:25px;
+
+margin-top:40px;
+
+}
+
+
+
+
+.social-links a{
+
+color:white;
+
+text-decoration:none;
+
+margin:10px;
+
+}
+
+
+
+
+
+/* الجوال */
+
+@media(max-width:700px){
+
+
+header h1{
+
+font-size:24px;
 
 }
 
@@ -488,9 +335,8 @@ footer{
 
 nav a{
 
-    width:100%;
-
-    text-align:center;
+width:90%;
+text-align:center;
 
 }
 
@@ -498,7 +344,21 @@ nav a{
 
 .card{
 
-    width:95%;
+width:95%;
+
+}
+
+
+.banner{
+
+max-height:none;
+
+}
+
+
+.service-box{
+
+width:100%;
 
 }
 

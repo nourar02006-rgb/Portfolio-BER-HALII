@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>حاسبة الاستفادة المبدئية</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<img src="https://cdn.imagetourls.com/uploads/tyImg/MAPiYt4E.jpg"
+class="logo"
+alt="شعار جمعية البر الأهلية بوادي حلي">
+
+
+<h1>
+حاسبة الاستفادة المبدئية
+</h1>
+
+
+<p>
+أداة مساعدة لمعرفة الفئة المحتملة قبل التواصل مع الجمعية
+</p>
+
+
+</header>
+
+
+
+
+<nav>
+
+<a href="index.html">الرئيسية</a>
+
+<a href="services.html">الخدمات</a>
+
+<a href="beneficiaries.html">الفئات المستفيدة</a>
+
+<a href="documents.html">المستندات</a>
+
+<a href="eligibility.html">حاسبة الاستفادة</a>
+
+<a href="contact.html">تواصل معنا</a>
+
+</nav>
+
+
+
+
+
+
+<section class="card">
+
+
+<h2>
+تحقق من الفئة المحتملة
+</h2>
+
+
+<p>
+
+هذه النتيجة مبدئية ولا تعتبر قبولًا نهائيًا، ويتم اعتماد الاستفادة بعد مراجعة بيانات المستفيد والمستندات المطلوبة من قبل الجمعية.
+
+</p>
+
+
+
+<label>
+الدخل الشهري للفرد (بالريال)
+</label>
+
+
+<input 
+type="number"
+id="income"
+placeholder="مثال: 750">
+
+
+
+<br><br>
+
+
+
+<button class="button"
+onclick="checkEligibility()">
+
+معرفة الفئة
+
+</button>
+
+
+
+
+<div id="result"
+style="margin-top:20px;font-size:18px;font-weight:bold;">
+</div>
+
+
+
+<br>
+
+
+
+<a href="https://www.bir-haly.org.sa/"
+target="_blank"
+class="button">
+
+زيارة موقع الجمعية للتأكد وتقديم الطلب
+
+</a>
+
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 جمعية البر الأهلية بوادي حلي
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+<script>
+
+
+function checkEligibility(){
+
+
+let income =
+Number(document.getElementById("income").value);
+
+
+let result =
+document.getElementById("result");
+
+
+
+if(!income){
+
+
+result.innerHTML =
+"يرجى إدخال الدخل الشهري للفرد";
+
+
+return;
+
+}
+
+
+
+if(income <= 750){
+
+
+result.innerHTML =
+"الفئة المحتملة: (أ)<br>الأولوية الأعلى حسب تصنيف الدخل.";
+
+
+}
+
+
+
+else if(income <= 1000){
+
+
+result.innerHTML =
+"الفئة المحتملة: (ب)";
+
+
+}
+
+
+
+else if(income <= 1250){
+
+
+result.innerHTML =
+"الفئة المحتملة: (ج)";
+
+
+}
+
+
+
+else if(income <= 1500){
+
+
+result.innerHTML =
+"الفئة المحتملة: (د)";
+
+
+}
+
+
+
+else{
+
+
+result.innerHTML =
+"الدخل أعلى من الحد المذكور للفئات الحالية، يمكنك زيارة موقع الجمعية للتأكد من الخدمات المتاحة.";
+
+
+}
+
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
